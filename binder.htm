@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>NWC Binder</title>
+  <style type="text/css" media="screen">
+
+/*Some Reset Styles*/
+  
+  div#nwcbinder ul#nwccontent,
+  div#nwcbinder ul#nwccontent * {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    color: #6D6A5D;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    list-style-type: none;
+  }
+
+  /*Basic dimensions and positioning*/
+  
+  /*
+    Eventually it might be necessary to add an id like #hasnwcbinder to all pages,
+    to keep any existing margin-top from overriding this:
+  */
+  body {
+    margin-top: 20em; /*This should at least match the height of div#nwcbinder*/
+  }
+  
+  div#nwcbinder {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 20em; /*Match to the margin top on body*/
+    background-color: #C5BD99;
+  }
+  div#nwcbinder ul#nwccontent {
+    position: relative;
+  }
+  div#nwcbinder ul#nwccontent li#nwcmain {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 400px;
+  }
+  div#nwcbinder ul#nwccontent li#nwcsummary {
+    margin: 10px 230px 0px 430px;
+  }
+  div#nwcbinder ul#nwccontent li#nwclinks {
+    position: absolute;
+    width: 200px;
+    right: 10px;
+    top: 0px;
+  }
+  
+  
+  
+  /*Typography*/
+  div#nwcbinder ul#nwccontent b { font-weight: bold; }
+  div#nwcbinder ul#nwccontent p {
+    line-height: 1.2;
+    padding-bottom: 1em;
+  }
+  div#nwcbinder ul#nwccontent li ul {
+    padding-bottom: 1em;
+  }
+  div#nwcbinder ul#nwccontent a:hover,
+  div#nwcbinder ul#nwccontent a:active {
+    color: #EEE;
+  }
+  div#nwcbinder ul#nwccontent li ul li {
+    line-height: 1.2;
+    list-style-type: square;
+    margin-left: 20px;
+  }
+  
+  div#nwcbinder ul#nwccontent li ul#nwccredits li {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  div#nwcbinder h1 {
+    margin: 0;
+    padding: 10px;
+    background-color: #701112;
+    color: white;
+    line-height: 1;
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  div#nwcbinder ul#nwccontent h2,
+  div#nwcbinder ul#nwccontent h3 {
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    padding-bottom: 2em;
+    line-height: 1.5;
+  }
+  div#nwcbinder ul#nwccontent h3 { 
+    font-weight: normal; 
+    padding-bottom: .5em;
+  }
+  div#nwcbinder ul#nwccontent li#nwcsummary h2 {
+    padding-bottom: 0em;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+  <!--
+    Using tons of unique IDs to make sure the binder styles do not interfere with the styles in the
+    individual chapters, and vice-versa.
+  -->
+  <div id="nwcbinder">
+    <h1 id="nwctitle">The New Work of Composing</h1>
+    <ul id="nwccontent">
+      <li id="nwcmain">
+        <h2 id="nwceds">Edited by Debra Journet, Cheryl Ball, &amp; Ryan Trauman</h2>
+        <p id="nwcbooksummary">
+          <b>Book summary.</b> Vivamus ligula est, dignissim ut vestibulum ac, congue pellentesque
+          elit. Nam vitae arcu erat. Vestibulum ante ipsum primis in faucibus orci luctus et
+          ultrices posuere cubilia Curae; Praesent rhoncus tellus eget magna dignissim volutpat.
+        </p>
+        <ul id="nwcnav">
+          <li><a href="#toc">Table of Contents</a></li>
+          <li><a href="#onav">Other book navigation</a></li>
+          <li><a href="#bnav">Book navigation cont.</a></li>
+        </ul>
+        <ul id="nwccredits">
+            <li><a href="#ccdp">Computers and Composition Digital Press</a></li>
+            <li><a href="#usup">Utah State University Press</a></li>
+        </ul>
+      </li>
+      <li id="nwcsummary">
+        <h2>Title That is the Title of the Webtext</h2>
+        <h3>Author Name, Author Name, and Author Name</h3>
+        <p>
+          <b>Webtext summary.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          varius nulla ac tortor hendrerit lacinia. Curabitur posuere tortor tempus dolor ultricies
+          semper scelerisque lacus facilisis. Aliquam at lobortis libero. Donec pretium augue at
+          eros ultrices eu aliquam augue facilisis. 
+        </p>
+        <p>
+          <b>Additional information or summary continuation.</b> Aliquam erat volutpat. Nam in
+          mauris vitae odio ullamcorper porttitor. Aliquam eu turpis ac est consequat pretium eget
+          nec erat.
+        </p>
+      </li>
+      <li id="nwclinks">
+        <h2>Media, Metadata, Etc.</h2>
+        <ul>
+          <li><a href="#media">Media for this webtext</a></li>
+          <li><a href="#metadata">Metadata for this webtext</a></li>
+          <li><a href="#more">More stuff that’s also cool</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="container">
+    <h1>Pretend Chapter Content</h1>
+    <p>It’s only pretend.</p>
+  </div>
+</body>
+</html>
