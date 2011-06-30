@@ -26,7 +26,8 @@
     Eventually it might be necessary to add an id like #hasnwcbinder to all pages,
     to keep any existing margin-top from overriding this:
   */
-  body {
+  html { margin-top: 3em; } /*An image replacement can render this as an exact pixel value*/
+  body.hasjs.nwcvisible {
     margin-top: 20em; /*This should at least match the height of div#nwcbinder*/
   }
   
@@ -35,7 +36,6 @@
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 20em; /*Match to the margin top on body*/
     background-color: #C5BD99;
   }
   div#nwcbinder ul#nwccontent {
@@ -89,7 +89,8 @@
     list-style-type: none;
     margin-left: 0;
   }
-  div#nwcbinder h1 {
+  div#nwcbinder h1 a {
+    display: block;
     margin: 0;
     padding: 10px;
     background-color: #701112;
@@ -112,7 +113,24 @@
     padding-bottom: 0em;
   }
 
+  .hasjs h1.nwctitle { cursor: pointer; }
+  .hasjs ul#nwccontent { display: none; }
+  .hasjs.nwcvisible ul#nwccontent { display: block; }
+  .hasjs.nwcvisible div#nwcbinder { height: 20em; }
+  .hasjs.nwcvisible { margin-top: 20em; }
   </style>
+  <!--Load jQuery-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <!--Very simple and unsexy hide/show-->
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('body').addClass('hasjs');
+    $('#nwctitle').click(function() {
+      $('body').toggleClass('nwcvisible');
+      return false;
+    });
+  });
+  </script>
 </head>
 <body>
   <!--
@@ -120,7 +138,7 @@
     individual chapters, and vice-versa.
   -->
   <div id="nwcbinder">
-    <h1 id="nwctitle">The New Work of Composing</h1>
+    <h1 id="nwctitle"><a href="#nwc">The New Work of Composing</a></h1>
     <ul id="nwccontent">
       <li id="nwcmain">
         <h2 id="nwceds">Edited by Debra Journet, Cheryl Ball, &amp; Ryan Trauman</h2>
