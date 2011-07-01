@@ -1,0 +1,125 @@
+/********************
+*
+* New Work of Composing, Journet, Ball, & Trauman, eds.
+* binder.css
+* 
+* v. 0.1
+* 07/01/2011
+*
+* see http://github.com/karlstolley/nwc
+*
+*********************/
+
+/*Some Reset Styles*/
+
+div#nwcbinder *,
+div#nwcbinder ul#nwccontent * {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #424242;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  list-style-type: none;
+}
+
+/*Basic dimensions and positioning*/
+
+div#nwcbinder {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background-color: #C5BD99;
+}
+div#nwcbinder ul#nwccontent {
+  position: relative;
+}
+div#nwcbinder ul#nwccontent li#nwcmain {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  width: 400px;
+}
+div#nwcbinder ul#nwccontent li#nwcsummary {
+  margin: 10px 230px 0px 430px;
+}
+div#nwcbinder ul#nwccontent li#nwclinks {
+  position: absolute;
+  width: 200px;
+  right: 10px;
+  top: 0px;
+}
+
+/*Typography*/
+
+div#nwcbinder ul#nwccontent b { font-weight: bold; }
+
+div#nwcbinder ul#nwccontent i,
+div#nwcbinder ul#nwccontent cite {
+  font-style: italic;
+}
+
+div#nwcbinder ul#nwccontent p {
+  line-height: 1.2;
+  padding-bottom: 1em;
+}
+div#nwcbinder ul#nwccontent li ul {
+  padding-bottom: 1em;
+}
+div#nwcbinder ul#nwccontent a:hover,
+div#nwcbinder ul#nwccontent a:active {
+  color: #EEE;
+}
+div#nwcbinder ul#nwccontent li ul li {
+  line-height: 1.2;
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+div#nwcbinder ul#nwccontent li ul#nwccredits li {
+  list-style-type: none;
+  margin-left: 0;
+}
+div#nwcbinder h1 a {
+  display: block;
+  background-color: #701112;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: bold;
+}
+div#nwcbinder ul#nwccontent h2,
+div#nwcbinder ul#nwccontent h3 {
+  font-weight: bold;
+  padding-bottom: 2em;
+  line-height: 1.5;
+}
+div#nwcbinder ul#nwccontent h3 { 
+  font-weight: normal; 
+  padding-bottom: .5em;
+}
+div#nwcbinder ul#nwccontent li#nwcsummary h2 {
+  padding-bottom: 0em;
+}
+
+/*
+  Binder Expansion/Contraction Magic, Using Only .hasjs and .nwcvisible classes;
+  animation effects will require changes here.
+*/
+.hasjs h1#nwctitle { cursor: pointer; }
+.hasjs ul#nwccontent { display: none; }
+.hasjs.nwcvisible ul#nwccontent { display: block; }
+.hasjs.nwcvisible div#nwcbinder { height: 22em; }
+div#nwcbinder { height: 22em; } /*No JavaScript; show full/expanded binder*/
+.hasjs div#nwcbinder { height: auto; } /*Roll up the height when JavaScript is present, tho*/
+html { margin-top: 22em; } /*No JavaScript; make room for full/expanded binder*/
+html.hasjs.nwcvisible { margin-top: 22em; }
+html.hasjs { margin-top: 61px } /* 10px top padding + 10px bot. padding
+                                   + 21px/1 font size on
+                                   `div#nwcbinder h1 a` */
