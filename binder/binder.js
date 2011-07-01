@@ -6,7 +6,7 @@
 * v. 0.1
 * 07/01/2011
 *
-* see http://github.com/karlstolley/nwc
+* see https://github.com/karlstolley/nwc
 *
 *********************/
 
