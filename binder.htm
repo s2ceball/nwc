@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
   <title>NWC Binder</title>
-  
+  <meta charset="utf-8" />
+
+
+
+<!--BEGIN Copy and paste these lines just before the closing </head> tag, as in this file-->
+  <!--Load the binder CSS-->
+  <!--Recommend putting /binder/ folder off of the root of NWC, and change this link to
+  root relative, e.g., href="/binder/binder.css" (a slash, /, in front of binder):-->
   <link rel="stylesheet" type="text/css" href="binder/binder.css" />
-  <!--Load jQuery-->
+  <!--Load jQuery from Google Code-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   <!--Load jQuery-based JavaScript for Binder-->
+  <!--Recommend to put /binder/ folder off of the root of NWC, and change this link to
+  root relative, e.g., href="/binder/binder.js" (a slash, /, in front of binder):-->
   <script type="text/javascript" src="binder/binder.js"></script>
+<!--END-->
+
+
+
+
 </head>
 <body>
-  <!--
-    Using tons of unique IDs to make sure the binder styles do not interfere with the styles in the
-    individual chapters, and vice-versa.
+
+  <!--BEGIN Copythese lines right after the opening <body> tag, as in this file.
+      *****NOTE***** It'd be best to put in the short book summary, TOC links, etc.
+      so that those are correct in all the copy and pasted versions, which should
+      then be modified for each individual webtext.
   -->
   <div id="nwcbinder">
     <h1 id="nwctitle"><a href="#nwc">The New Work of Composing</a></h1>
@@ -59,6 +74,13 @@
       </li>
     </ul>
   </div>
+  <!--END-->
+
+
+
+
+
+
   <div id="container">
     <h1>Pretend Chapter Content</h1>
     <p>It’s only pretend.</p>
