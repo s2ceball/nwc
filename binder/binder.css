@@ -115,11 +115,11 @@ div#nwcbinder ul#nwccontent li#nwcsummary h2 {
 .hasjs h1#nwctitle { cursor: pointer; }
 .hasjs ul#nwccontent { display: none; }
 .hasjs.nwcvisible ul#nwccontent { display: block; }
-.hasjs.nwcvisible div#nwcbinder { height: 22em; }
-div#nwcbinder { height: 22em; } /*No JavaScript; show full/expanded binder*/
+.hasjs.nwcvisible div#nwcbinder { height: 28em; }
+div#nwcbinder { height: 28em; } /*No JavaScript; show full/expanded binder*/
 .hasjs div#nwcbinder { height: auto; } /*Roll up the height when JavaScript is present, tho*/
-html { margin-top: 22em; } /*No JavaScript; make room for full/expanded binder*/
-html.hasjs.nwcvisible { margin-top: 22em; }
+html { margin-top: 28em; } /*No JavaScript; make room for full/expanded binder*/
+html.hasjs.nwcvisible { margin-top: 28em; }
 html.hasjs { margin-top: 61px } /* 10px top padding + 10px bot. padding
                                    + 21px/1 font size on
                                    `div#nwcbinder h1 a` */
